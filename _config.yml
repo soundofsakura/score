@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+title: 樱之音口琴协会
+subtitle: 
+description: 武汉大学樱之音口琴社成立于1996年，至今已经有20年之久，多年来一直致力于让同学们更好地学习口琴演奏，感受音乐魅力，以琴会友，给各位口琴爱好者和音乐爱好者们提供以互相交流和展示自我的平台
+author: IwYvI
+language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: https://soundofsakura.github.io/score
+root: /score/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -63,9 +63,11 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: maupassant
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/soundofsakura/score.git
+  branch: gh-pages
