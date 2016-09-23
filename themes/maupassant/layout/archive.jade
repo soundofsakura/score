@@ -13,7 +13,7 @@ block content
   .post
     .post-archive
         //Use lodash to classify posts. See https://lodash.com/docs#groupBy
-        each posts, year in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
+        each posts, year in _.groupBy(site.posts.toArray(), function(p){return -p.date.format('YYYY')})
           each p, month in _.groupBy(posts, function(p){return -p.date.format('MM')})
             h2= -year + '年' + -month + '月'
             ul.listing
@@ -22,4 +22,3 @@ block content
                   span.date= post.date.format('YYYY/MM/DD')
                   a(href=url_for(post.path), title=post.title)
                     +title(post)
-  include _partial/paginator.jade
